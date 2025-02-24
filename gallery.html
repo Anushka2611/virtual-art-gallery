@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            color: rgb(239, 234, 234);
+            padding: 1.5rem 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: rgb(236, 230, 230);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+        .home, .gallery, .art-details {
+            padding: 50px;
+            background: url('images/gallery-bg.jpeg') no-repeat center center/cover;
+            color: rgb(8, 0, 0);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff5722;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e64a19;
+        }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .artwork {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .artwork:hover {
+            transform: translateY(-10px);
+        }
+        .artwork img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .artwork h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .artwork p a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .artwork p a:hover {
+            background: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Virtual Art Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="gallery">
+        <h2>Art Collection</h2>
+        <div class="gallery-container">
+            <div class="artwork">
+                <img src="images/art1.jpg" alt="Starry Night">
+                <h3>Artwork 1</h3>
+                <p><a href="artwork1.html">View Details</a></p>
+            </div>
+            <div class="artwork">
+                <img src="images/art2.jpg" alt="The Persistence of Memory">
+                <h3>Artwork 2</h3>
+                <p><a href="artwork2.html">View Details</a></p>
+            </div>
+            <div class="artwork">
+                <img src="images/art3.jpg" alt="The Great Wave off Kanagawa">
+                <h3>Artwork 3</h3>
+                <p><a href="artwork3.html">View Details</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
